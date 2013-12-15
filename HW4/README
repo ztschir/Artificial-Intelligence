@@ -1,0 +1,21 @@
+Homework 3
+
+Partner 1: Thomas Lo 
+EID: tl7543
+
+Partner 2: Zachary Tschirhart
+EID: zst75
+
+This parser is the same as the original parser besides the following PDA changes:
+
+S -> S and S
+ This was implemented by wrapping the original code in semantic_parser with a for loop that operates on each substring that is separated by the “and” keyword. This allows the rest of the code to work as it did before, but appending each command to the result list.
+
+VP1 NP1 NP4 NP3
+ This was implemented by detected the indexes of to/on and from, and swapping the nouns if needed, so that it would work using the original code.
+
+ADJ pole and ADJ -> left | middle | right
+ This was implemented by replacing all instances of left/middle/right pole with pole1/pole2/pole3. This was done before the nouns were parsed, so we could use the existing code.
+
+Error checking
+ We checked for valid words (Even included the word “down” because it was in the sample commands) first and kicked out if a valid word was not found. Then we added extra checking around the distention and source nouns to make sure they are a “pole” keyword. Then before returning the parsed nouns, we checked to make sure there were either 3 or 2 nouns (depending on the verb) in the result string.

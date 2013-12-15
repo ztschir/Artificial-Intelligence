@@ -1,0 +1,16 @@
+Homework 2
+
+Partner 1: Thomas Lo 
+EID: tl7543
+
+Partner 2: Zachary Tschirhart
+EID: zst75
+
+
+
+2. In the current code, we detect the infinite loop by looking for a goal, action, and state combination that has been tried before. 
+
+3. We fix the problem by skipping any action that has the goal, action, and state combination that was tried before. 
+
+4. This should eventually give a solution for the general case, but it will not be optimal. It will more than likely be a few times longer than the optimal solution. It avoids the path on the second time through, but it doesn't remove the extra steps that it took. 
+

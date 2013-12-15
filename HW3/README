@@ -1,0 +1,17 @@
+Homework 3
+
+Partner 1: Thomas Lo 
+EID: tl7543
+
+Partner 2: Zachary Tschirhart
+EID: zst75
+
+
+In order to switch between each of the modes, find the self.mode variable in the init method and change the value. The value of 0 maps to the tabular mode, 1 to tiling mode, and 2 is nearest neighbors.
+
+
+How we implemented Tiling:
+We just created a map from the fine tiles to the course tiles and only stored the Q-values for the course tile. 
+
+How we implemented Nearest Neighbor:
+We used the previously created mapping and moved based on the three closest course tiles. Then after the "best" move was made based on the weights and Q values equation, we updated the three closest course tile neighbors.
